@@ -1,0 +1,2 @@
+event_id,timestamp,source_type,image_data,pre_crash_speed,delta_v,brake_status,engine_rpm,brake_status_conflict,brake_pressure_low
+cdr_1,1000.0,bosch_cdr,,45.0,42.0,true,3000.0,false,false

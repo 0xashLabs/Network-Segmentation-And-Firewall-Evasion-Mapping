@@ -1,0 +1,30 @@
+[
+  {
+    "event_id": "can_1",
+    "timestamp": 1000.2,
+    "source_type": "can_log",
+    "image_data": "camera_front_001.jpg",
+    "arbitration_id": 512,
+    "dlc": 1,
+    "bus_channel": "vcan0",
+    "data_bytes": "00",
+    "packet_injection": false,
+    "firmware_error_flag": false,
+    "diagnostic_mode_active": false,
+    "traction_loss": false
+  },
+  {
+    "event_id": "can_2",
+    "timestamp": 999.5,
+    "source_type": "can_log",
+    "image_data": "",
+    "arbitration_id": 768,
+    "dlc": 1,
+    "bus_channel": "vcan0",
+    "data_bytes": "03",
+    "packet_injection": true,
+    "firmware_error_flag": false,
+    "diagnostic_mode_active": true,
+    "traction_loss": false
+  }
+]
