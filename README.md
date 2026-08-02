@@ -13,7 +13,7 @@ This project implements a realistic network security lab to test and demonstrate
 **Report:** `RED_TEAM_LAB_REPORT.pdf` (20 pages)
 
 **Course:** CY376 - Network Monitoring, Security and Auditing  
-**Author:** 0xash (Dante) | UMaT Tarkwa  
+**Author:** Othniel-Oppong Nhyira(0xash) | UMaT Tarkwa  
 **Date:** August 2026  
 **Project Type:** Red Team  
 
@@ -22,17 +22,17 @@ This project implements a realistic network security lab to test and demonstrate
 ## Key Findings
 
 ### Layer 3/4 Filtering (iptables)
-- ✓ **Evasion Method:** Source IP spoofing
+-  **Evasion Method:** Source IP spoofing
 - **Result:** iptables rules based solely on source address can be bypassed via packet crafting
 - **Mitigation:** Stateful connection tracking + ingress filtering (uRPF)
 
 ### Layer 7 Filtering (XDP Signature Matching)
-- ✓ **Evasion Methods:** Case variation (`/Attack` vs `/attack`), Hex encoding (`/%61ttack`)
+-  **Evasion Methods:** Case variation (`/Attack` vs `/attack`), Hex encoding (`/%61ttack`)
 - **Result:** Simple signature matching without payload normalization is trivial to bypass
 - **Mitigation:** Normalize payloads (lowercase, URL decode) before matching
 
 ### Post-Exploitation (BPF Map Poisoning)
-- ✓ **Exploitation Method:** Direct BPF map state manipulation via `bpftool`
+-  **Exploitation Method:** Direct BPF map state manipulation via `bpftool`
 - **Result:** Complete firewall bypass by adding attacker IP to the whitelist map
 - **Impact:** Defense evasion after code execution on firewall host
 - **Mitigation:** Restrict `CAP_BPF`/`CAP_SYS_ADMIN`, audit map modifications
@@ -96,33 +96,6 @@ This project implements a realistic network security lab to test and demonstrate
 
 ---
 
-## Repository Structure
-
-```
-├── README.md                          # This file
-├── RED_TEAM_LAB_REPORT.pdf            # Full 20-page report (CY376 submission)
-├── docs/
-│   ├── lab-setup.md                   # Detailed setup instructions
-│   ├── firewall-analysis.md           # Firewall configuration details
-│   └── evasion-techniques.md           # Evasion method explanations
-├── scripts/
-│   ├── ebpf-firewall.c                # XDP firewall source code
-│   ├── evasion-tests.py               # Scapy-based evasion testing
-│   ├── bpf-map-poison.sh              # Map poisoning commands
-│   └── exploit.sh                     # RCE exploitation steps
-├── configs/
-│   ├── proxmox-network-config.conf    # Network configuration
-│   ├── iptables-rules.txt             # Firewall rules
-│   └── lxc-container-setup.sh         # Container creation script
-├── evidence/
-│   ├── screenshots/                   # Lab testing screenshots
-│   ├── logs/                          # tcpdump, curl output logs
-│   └── results.txt                    # Consolidated testing results
-└── .gitignore                         # Excludes credentials, secrets
-
-```
-
----
 
 ## How to Use
 
