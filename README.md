@@ -10,7 +10,7 @@ a# Red Team Lab: Network Segmentation Testing and Firewall Evasion Mapping
 
 This project implements a realistic network security lab to test and demonstrate the effectiveness (and limitations) of layered firewall defenses. Through systematic reconnaissance, exploitation, and post-exploitation activities, the exercise shows how attackers can progress through network segmentation, application-layer filtering, and finally compromise firewall state itself.
 
-**Report:** `RED_TEAM_LAB_REPORT.pdf` (20 pages)
+**Report:** `RED_TEAM_LAB_REPORT.pdf` 
 
 **Course:** CY376 - Network Monitoring, Security and Auditing  
 **Author:** Othniel-Oppong Nhyira(0xash) | UMaT Tarkwa  
@@ -272,6 +272,4 @@ For questions about this project:
 
 ---
 
-**Disclaimer:** This project is educational material created for a university course. The techniques demonstrated are intended to help defenders understand attack methodologies and improve their defensive postures. Do not use these techniques against systems you do not own or have explicit permission to test.
-
-
+**Disclaimer:** This project is educational material for educational purposes only, and I am not liable for any consequences caused by misusage.
